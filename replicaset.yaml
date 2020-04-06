@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx-replicaset
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      label: nginx-replicaset-label
+  template:
+    metadata:
+      labels:
+        label: nginx-replicaset-label
+    spec:
+      containers:
+      - name: nginx-replicaset-container
+        image: nginx
+        ports:
+        - containerPort: 80
