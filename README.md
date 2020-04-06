@@ -60,7 +60,7 @@ nslookup nginx-service
 curl localhost
 ```
 
-### Test nodeport from different pod
+### Test service from different pod
 ```bash
 kubectl run -ti --rm ubuntu-local --image=ubuntu:local -- bash
 curl nginx-service
