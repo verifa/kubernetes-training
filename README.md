@@ -58,7 +58,6 @@ kubectl exec -ti nginx-pod -c ubuntu-container -- bash
 ifconfig
 nslookup nginx-service
 curl localhost
-curl 10.97.223.40
 ```
 
 ### Test nodeport from different pod
