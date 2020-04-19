@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app
+  labels:
+    app: app
+  annotations:
+    backup.velero.io/backup-volumes: app-pvc
+spec:
+  containers:
+  - name: app
+    image: ubuntu
+    command: ["/bin/bash"]
+    args: ["-c", "echo POD STARTED: $(date -u)  >> /data/out.txt; while true; do echo $(date -u); sleep 5; done"]
+    volumeMounts:
+    - name: app-pvc
+      mountPath: "/data"
+  volumes:
+  - name: app-pvc
+    persistentVolumeClaim:
+      claimName: app-pvc

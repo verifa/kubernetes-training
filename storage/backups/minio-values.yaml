@@ -1,0 +1,7 @@
+accessKey: minio
+secretKey: minio-key
+service:
+  type: NodePort
+replicas: 1
+persistence:
+   enabled: false

@@ -1,5 +1,12 @@
 # Kubernetes Training
 
+There is more content being added to this repository...
+
+## Table of Contents
+
+1. General Introduction (this page)
+2. [Storage](storage/README.md)
+
 ## 1. Minikube and kubectl preparation
 
 ### Set hyperkit as default driver and start minikube

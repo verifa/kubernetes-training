@@ -1,0 +1,33 @@
+initContainers: 
+  - name: velero-plugin-for-aws
+    image: velero/velero-plugin-for-aws:v1.0.1
+    imagePullPolicy: IfNotPresent
+    volumeMounts:
+      - mountPath: /target
+        name: plugins
+
+configuration:
+  provider: aws
+  backupStorageLocation:
+    name: aws
+    bucket: velero
+    config:
+      region: minio
+      s3ForcePathStyle: "true"
+      # s3Url: set via command line
+  volumeSnapshotLocation:
+    name: aws
+    bucket: velero
+    config:
+      region: minio
+
+credentials:
+  useSecret: true
+  secretContents:
+    cloud: |
+      [default]
+      aws_access_key_id = minio
+      aws_secret_access_key = minio-key
+
+snapshotsEnabled: false # as we are using restic this should be false
+deployRestic: false
