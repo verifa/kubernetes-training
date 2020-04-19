@@ -2,11 +2,13 @@
 
 This section will cover some very essential details to understanding Kubernetes storage. It is not comprehensive, but aimed at getting you up to speed to work with production environments asap.
 
+There are some directories under the ```storage``` directory containing mostly yaml files and kubernetes resources. Some of these you need to change to make this work.
+
 ## Setup
 
-On top of Minikube and the base environment, we will be using 
-- [Helm](https://helm.sh/)
-- [yq](https://github.com/mikefarah/yq)
+On top of Minikube and the base environment defined in the root [README.md](../README.md), we will be using 
+- [Helm](https://helm.sh/) - only needed for the last section using Velero and Minio
+- [yq](https://github.com/mikefarah/yq) - only needed if you are too lazy to actually run through the exercises yourself
 
 # Basics of Storage in Kubernetes
 
