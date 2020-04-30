@@ -9,6 +9,7 @@ There are some directories under the ```storage``` directory containing mostly y
 On top of Minikube and the base environment defined in the root [README.md](../README.md), we will be using 
 - [Helm](https://helm.sh/) - only needed for the last section using Velero and Minio
 - [yq](https://github.com/mikefarah/yq) - only needed if you are too lazy to actually run through the exercises yourself
+- [kubectx](https://github.com/ahmetb/kubectx) - Kubernetes "power tools". kubectx to switch between clusters, kubens to switch between namespaces
 
 # Basics of Storage in Kubernetes
 
